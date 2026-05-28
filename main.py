@@ -5,6 +5,9 @@ from contextlib import asynccontextmanager
 import httpx
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
+from dotenv import load_dotenv
+
+load_dotenv()
 
 SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL")
 WEBHOOK_TIMEOUT_SECONDS = 5.0
